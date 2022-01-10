@@ -28,7 +28,7 @@ const PostPage: NextPage<IProps> = ({
 
 	return (
 		<Layout
-			title={`${title} - Jacob Herper's Blog`}
+			title={`${title} - Chuckz Okoye's Blog`}
 			description={seoDescription}
 		>
 			<Container>

@@ -26,10 +26,10 @@ const Header = () => {
 					<Link href="/">
 						<a className="group relative transition whitespace-nowrap hover:transition duration-300 text-2xl font-bold">
 							<span className="transition duration-300 opacity-100 group-hover:opacity-0">
-								@jakeherp
+								@chuckzokoye
 							</span>
 							<span className="absolute transition duration-300 left-0	 opacity-0 group-hover:opacity-100 text-transparent bg-clip-text hover:bg-gradient-to-r from-blue-start to-blue-stop dark:from-purple-start dark:to-purple-stop">
-								Jacob Herper
+								Chuckz Okoye
 							</span>
 						</a>
 					</Link>

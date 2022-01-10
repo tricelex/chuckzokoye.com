@@ -14,7 +14,7 @@ interface IProps {
 const UsesPage: NextPage<IProps> = ({ markdown }) => {
 	return (
 		<Layout
-			title="Jacob Herper uses ..."
+			title="Chuckz Okoye uses ..."
 			description="This is a comprehensive list of tech equipment and software I use for my day-to-day work as a software engineer in the UK."
 		>
 			<Container>

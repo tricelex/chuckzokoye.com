@@ -15,7 +15,7 @@ interface IProps {
 const CaseStudiesPage: NextPage<IProps> = ({ caseStudies }) => {
 	return (
 		<Layout
-			title="Software Engineering Case Studies – Jacob Herper"
+			title="Software Engineering Case Studies – Chuckz Okoye"
 			description={`Here you can find ${caseStudies.length} case studies of projects I have worked on over the last few years. Learn how I have overcome challenges.`}
 		>
 			<Container>

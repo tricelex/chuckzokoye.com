@@ -4,48 +4,47 @@ import Typed from 'react-typed';
 
 const IndexPage = () => {
 	const talkAbout = [
+		'Python',
 		'React',
 		'JavaScript',
 		'TypeScript',
 		'GraphQL',
-		'Redux',
-		'Jamstack',
-		'Next.js',
+		'Blockchain',
+		'Django',
+		'Solidity',
 		'RESTful APIs',
-		'HTML',
-		'CSS',
-		'Gatsby',
-		'Svelte',
+		'Defi',
 	];
 
 	return (
 		<Layout
-			title="Senior Software Engineer and Consultant – Jacob Herper"
-			description="A Front-End Software Engineer with a focus on JavaScript and React. I have more than 10 years experience working in software engineering and consulting."
+			title="Software Engineer – Chuckz Okoye"
+			description="A Back-End Software Engineer with a focus on Python and JavaScript. I have more than 5 years experience working in software engineering."
 			keywords={[
 				'Software Engineer',
-				'Jacob Herper',
-				'Software Consulting',
-				'Front-End',
+				'Chuckz Okoye',
+				'Blockchain',
+				'Back-End',
 				'Full-Stack',
 				'React',
 				'TypeScript',
 				'JavaScript',
 				'GraphQL',
-				'CSS',
-				'Tailwind',
+				'Python',
+				'Django',
+				'Solidity',
 			]}
 		>
 			<Container>
 				<h1 className="headline mt-20 text-3xl md:text-5xl lg:text-6xl">
-					Hey, I&apos;m Jacob Herper 👋
+					Hey, I&apos;m Chuckz Okoye!
 				</h1>
 				<p className="my-8 text-lg">
-					I am a passionate Software Engineer, specialised in front-end
-					development using React and TypeScript. As an advocate for web
-					performance and accessibility and an evangelist for the Jamstack, I
-					create amazing web applications to make the internet a better place.
-					You can talk to me about{' '}
+					I am a professional Software Engineer, specialized in back-end
+					development using Python and JavaScript. As advocate for building
+					decentralized applications using web3 technologies, I create and
+					contribute to amazing web applications making the internet a better
+					place. You can talk to me about{' '}
 					<Typed
 						loop
 						typeSpeed={80}
@@ -57,19 +56,6 @@ const IndexPage = () => {
 						showCursor
 						cursorChar="|"
 					/>
-					.
-				</p>
-				<p>
-					P.S. this website is open-source and available on{' '}
-					<a
-						href="https://github.com/jakeherp/portfolio"
-						title="Link to Github repository"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="underlined font-bold relative border-b-2 border-grey-300 dark:border-grey-700 hover:border-b-0"
-					>
-						Github
-					</a>
 					.
 				</p>
 			</Container>

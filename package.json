@@ -1,17 +1,17 @@
 {
-	"name": "portfolio",
+	"name": "chuckzokoye.com",
 	"description": "A redesign of my portfolio website.",
 	"version": "3.4.2",
 	"author": {
-		"name": "Jacob Herper",
-		"email": "jacob@herper.io",
-		"url": "https://herper.io/"
+		"name": "Chuckz Okoye",
+		"email": "tricelex@gmail.com",
+		"url": "https://chuckzokoye.com/"
 	},
 	"license": "MIT",
 	"private": false,
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/jakeherp/portfolio"
+		"url": "https://github.com/tricelex/chuckzokoye.com"
 	},
 	"scripts": {
 		"dev": "next",
