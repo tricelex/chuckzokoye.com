@@ -6,14 +6,14 @@ const IndexPage = () => {
 	const talkAbout = [
 		'Python',
 		'React',
-		'JavaScript',
-		'TypeScript',
-		'GraphQL',
-		'Blockchain',
 		'Django',
+		'JavaScript',
 		'Solidity',
+		'TypeScript',
+		'Blockchain',
+		'GraphQL',
+		'DeFi',
 		'RESTful APIs',
-		'Defi',
 	];
 
 	return (
