@@ -20,8 +20,8 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
 		>
 			<ul className="flex flex-col justify-center align-center text-center gap-4 h-full">
 				<NavigationItem href="/about" title="About" />
-				<NavigationItem href="/uses" title="Uses" />
-				<NavigationItem href="/case-studies" title="Case Studies" />
+				{/* <NavigationItem href="/uses" title="Uses" /> */}
+				{/* <NavigationItem href="/case-studies" title="Case Studies" /> */}
 				<NavigationItem href="/blog" title="Blog" />
 				<li className="flex justify-center mt-12">
 					<ThemeToggle />

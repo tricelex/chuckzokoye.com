@@ -36,8 +36,8 @@ const Header = () => {
 					<nav className="hidden md:block">
 						<ul className="flex gap-8 text-lg">
 							<NavigationItem href="/about" title="About" />
-							<NavigationItem href="/uses" title="Uses" />
-							<NavigationItem href="/case-studies" title="Case Studies" />
+							{/* <NavigationItem href="/uses" title="Uses" /> */}
+							{/* <NavigationItem href="/case-studies" title="Case Studies" /> */}
 							<NavigationItem href="/blog" title="Blog" />
 						</ul>
 					</nav>

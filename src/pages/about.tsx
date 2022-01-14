@@ -2,26 +2,25 @@ import { IEducation, IJob, IPodcast } from '@types';
 
 import { client } from 'apollo-client';
 import { gql } from '@apollo/client';
-// import { mapEducation } from 'utils/mappings/mapEducation';
-// import { mapJobs } from 'utils/mappings/mapJobs';
+import { mapEducation } from 'utils/mappings/mapEducation';
+import { mapJobs } from 'utils/mappings/mapJobs';
 import { mapPodcasts } from 'utils/mappings/mapPodcasts';
 import { NextPage } from 'next';
 
 import { Button } from 'Atoms/Button';
 import { Container } from 'Atoms/Container';
-// import { Education } from 'Organisms/Education';
+import { Education } from 'Organisms/Education';
 import { Icon } from 'Atoms/Icon';
 import { Layout } from 'Templates/Layout';
 import { PodcastList } from 'Molecules/PodcastList';
-// import { WorkExperience } from 'Organisms/WorkExperience';
+import { WorkExperience } from 'Organisms/WorkExperience';
 
 interface IProps {
 	podcasts: IPodcast[];
+	jobs: IJob[];
 }
 
-const AboutPage: NextPage<IProps> = ({ podcasts }) => {
-	console.log(client);
-	console.log('client');
+const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 	return (
 		<Layout
 			title="About Chuckz Okoye, a Senior Software Engineer and Consultant in the UK"
@@ -61,7 +60,7 @@ const AboutPage: NextPage<IProps> = ({ podcasts }) => {
 
 				<h2 className="headline mt-12 mb-4 text-4xl">Experience</h2>
 
-				{/* <WorkExperience jobs={jobs} /> */}
+				<WorkExperience jobs={jobs} />
 
 				<h2 className="headline mt-12 mb-4 text-4xl">Education</h2>
 				<p className="mb-6">
@@ -69,7 +68,7 @@ const AboutPage: NextPage<IProps> = ({ podcasts }) => {
 					certifications I have achieved:
 				</p>
 
-				{/* <Education education={education} /> */}
+				<Education education={education} />
 
 				<div className="flex justify-center mt-8">
 					<Button
@@ -102,6 +101,40 @@ export async function getStaticProps() {
 						url
 					}
 				}
+				jobs(orderBy: fromDate_DESC) {
+					id
+					jobTitle
+					fromDate
+					toDate
+					description {
+						markdown
+					}
+					company {
+						name
+						url
+						logo {
+							url
+						}
+					}
+					skills {
+						skill
+					}
+				}
+				educations(orderBy: date_DESC) {
+					id
+					course
+					date
+					courseContents {
+						skill
+					}
+					institute {
+						name
+						url
+						logo {
+							url
+						}
+					}
+				}
 			}
 		`,
 	});
@@ -109,6 +142,8 @@ export async function getStaticProps() {
 	return {
 		props: {
 			podcasts: mapPodcasts(data.podcasts),
+			education: mapEducation(data.educations),
+			jobs: mapJobs(data.jobs),
 		},
 	};
 }
