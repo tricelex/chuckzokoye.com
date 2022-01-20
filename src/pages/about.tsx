@@ -18,6 +18,7 @@ import { WorkExperience } from 'Organisms/WorkExperience';
 interface IProps {
 	podcasts: IPodcast[];
 	jobs: IJob[];
+	education: IEducation[];
 }
 
 const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
