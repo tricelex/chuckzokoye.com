@@ -1,5 +1,5 @@
 import { onError } from '@apollo/client/link/error';
-import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloClient, from, HttpLink, InMemoryCache } from '@apollo/client';
 
 const httpLink = new HttpLink({
 	uri: 'https://api-eu-west-2.graphcms.com/v2/cky8ytd9e3bww01z40ev1356q/master',
