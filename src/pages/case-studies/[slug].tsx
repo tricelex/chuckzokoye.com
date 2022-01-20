@@ -31,7 +31,7 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 
 	return (
 		<Layout
-			title={`Case Study: ${title} - Jacob Herper's Case Studies`}
+			title={`Case Study: ${title} - Chuckz Okoye's Case Studies`}
 			description={seoDescription}
 		>
 			<Container>

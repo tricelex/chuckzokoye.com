@@ -18,43 +18,41 @@ import { WorkExperience } from 'Organisms/WorkExperience';
 interface IProps {
 	podcasts: IPodcast[];
 	jobs: IJob[];
-	education: IEducation[];
 }
 
 const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 	return (
 		<Layout
-			title="About Jacob Herper, a Senior Software Engineer and Consultant in the UK"
+			title="About Chuckz Okoye, a Senior Software Engineer and Consultant in the UK"
 			description="As a passionate front-end software developer, I create amazing websites and web apps to make the internet a better place."
 		>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
-					Hey, I&apos;m Jacob Herper
+					Hey, I&apos;m Chuckz Okoye
 				</h1>
 				<h2 className="font-bold text-xl md:text-2xl mt-2">
-					Senior Software Engineer from the UK
+					Software Engineer from Nigeria
 				</h2>
 				<p className="mt-8">
-					As a passionate front-end developer, I create amazing websites and web
-					apps to make the internet a better place. I am an advocate for web
-					performance and accessibility as well as a JAMstack enthusiast with
-					experience in serverless technologies.
+					As a professional software developer, I create amazing scalable web
+					applications app to make the internet a better place. I am an advocate
+					for a decentralized internet, with major interest in the FinTech and
+					DeFi space. Enthusiast with experience in production level
+					technologies.
 				</p>
 				<p className="my-4">
-					I am 31 years old and have been a web developer for as long as I can
-					think. The technologies I work with are JavaScript, HTML and CSS with
-					a focus on the frameworks React.js, Gatsby, Next.js, Node and Express.
-					I use code not only to do my day-to-day job, but also to solve
-					everyday problems I come across.
+					I am 26 years old and have been a professional web developer for about
+					5 years now. The technologies I work with are JavaScript, Python and
+					Solidity with a focus on the frameworks Django, React.js, Next.js,
+					Node and Express. I use code not only to do my day-to-day job, but
+					also to contribute to open-source projects in the web3 space.
 				</p>
 				<p>
-					When I am not writing code I love to spend time with my wife and 3
-					year old daughter at home in London or travelling around the world. We
-					are quite a multi-cultural family with me having grown up in Germany
-					🇩🇪 and my wife being from Mexico 🇲🇽, which is why we raise our
-					daughter trilingual. I myself speak five languages (some better than
-					others). Furthermore I enjoy cooking fresh food when I come home after
-					a long day at the office.
+					When I am not writing code I love to spend time with my family and
+					friends in Lagos. I hang around a couple of DAOs on Discord and
+					actively contribute to the MoonShot Collective work-stream of
+					GitcoinDAO and I love to read fiction and non-fiction books, watch
+					sci-fi movies and play games on my playstation console.
 				</p>
 				<h2 className="headline mt-12 mb-4 text-4xl">Podcasts I enjoy</h2>
 
@@ -74,7 +72,7 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 
 				<div className="flex justify-center mt-8">
 					<Button
-						href="/cv-2021.pdf"
+						href="/Emmanuel_Okoye_CV.pdf"
 						download={true}
 						className="group flex gap-2 whitespace-nowrap"
 					>
