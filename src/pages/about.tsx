@@ -72,7 +72,7 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 
 				<div className="flex justify-center mt-8">
 					<Button
-						href="/cv-2021.pdf"
+						href="/Emmanuel_Okoye_CV.pdf"
 						download={true}
 						className="group flex gap-2 whitespace-nowrap"
 					>
