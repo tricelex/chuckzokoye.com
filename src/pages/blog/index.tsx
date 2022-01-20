@@ -15,7 +15,7 @@ interface IProps {
 const BlogPage: NextPage<IProps> = ({ posts }) => {
 	return (
 		<Layout
-			title="Software Engineering Blog by Jacob Herper"
+			title="Software Engineering Blog by Chuckz Okoye"
 			description="I try to make an effort to document my journey as a software developer in the form of blog posts. Here you find some of the articles I published over the years."
 		>
 			<Container>

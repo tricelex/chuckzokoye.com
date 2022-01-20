@@ -49,7 +49,7 @@ const RecruitersPage: NextPage<IProps> = ({ markdown }) => {
 
 	return (
 		<Layout
-			title="Recruiter Information about Jacob Herper"
+			title="Recruiter Information about Chuckz Okoye"
 			description="Thank you for your interest in me for software engineering roles you are hiring for."
 		>
 			<Container>

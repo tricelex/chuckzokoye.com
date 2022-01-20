@@ -17,7 +17,7 @@ export type Props = {
 
 export const Layout: FC<Props> = ({
 	children,
-	title = 'Jacob Herper - Software Engineer',
+	title = 'Chuckz Okoye - Software Engineer',
 	description,
 	keywords,
 	meta,
