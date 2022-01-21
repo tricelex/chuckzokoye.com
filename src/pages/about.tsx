@@ -44,9 +44,9 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 				<p className="my-4">
 					I am 26 years old and have been a professional web developer for about
 					5 years now. The technologies I work with are JavaScript, Python and
-					Solidity with a focus on the frameworks Django, React.js, Next.js,
-					Node and Express. I use code not only to do my day-to-day job, but
-					also to contribute to open-source projects in the web3 space.
+					Solidity with a focus on Django, React.js, Next.js, Node and Express.
+					I use code not only to do my day-to-day job, but also to contribute to
+					open-source projects in the web3 space.
 				</p>
 				<p>
 					When I am not writing code I love to spend time with my family and

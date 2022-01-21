@@ -40,8 +40,8 @@ const IndexPage = () => {
 					Hey, I&apos;m Chuckz Okoye!
 				</h1>
 				<p className="my-8 text-lg">
-					I am a professional Software Engineer, specialized in back-end
-					development using Python and JavaScript. As advocate for building
+					I am a Professional Software Engineer, specialized in backend
+					development using Python and JavaScript. An advocate for building
 					decentralized applications using web3 technologies, I create and
 					contribute to amazing web applications making the internet a better
 					place. You can talk to me about{' '}
