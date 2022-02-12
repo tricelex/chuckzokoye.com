@@ -18,7 +18,7 @@ const SeoHead = ({
 	description,
 	author = 'Chuckz Okoye',
 	keywords,
-	image = 'https://res.cloudinary.com/jacobherper/image/upload/v1641565970/website-dark-light.png',
+	image = 'https://res.cloudinary.com/tricelex/image/upload/v1644686428/chuckzokoye/chuckzokoye_megmrz.png',
 	meta,
 }: HeadProps) => {
 	return (
