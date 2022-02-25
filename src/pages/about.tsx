@@ -24,15 +24,15 @@ interface IProps {
 const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 	return (
 		<Layout
-			title="About Chuckz Okoye, a Senior Software Engineer and Consultant in the UK"
-			description="As a passionate front-end software developer, I create amazing websites and web apps to make the internet a better place."
+			title="About Chuckz Okoye, a FullStack Software Engineer"
+			description="As a passionate full-stack software developer, I create amazing websites and web apps to make the internet a better place."
 		>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
 					Hey, I&apos;m Chuckz Okoye
 				</h1>
 				<h2 className="font-bold text-xl md:text-2xl mt-2">
-					Software Engineer from Nigeria
+					FullStack Software Engineer from Nigeria
 				</h2>
 				<p className="mt-8">
 					As a professional software developer, I create amazing scalable web

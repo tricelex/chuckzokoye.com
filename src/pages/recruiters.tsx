@@ -54,7 +54,7 @@ const RecruitersPage: NextPage<IProps> = ({ markdown }) => {
 		>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
-					Hi, I&apos;m Jacob!
+					Hi, I&apos;m Chuckz Okoye!
 				</h1>
 				<h2 className="headline text-xl md:text-2xl lg:text-3xl">
 					Nice to meet you.

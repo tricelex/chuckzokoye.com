@@ -37,7 +37,7 @@ const Header = () => {
 						<ul className="flex gap-8 text-lg">
 							<NavigationItem href="/about" title="About" />
 							<NavigationItem href="/uses" title="Uses" />
-							{/* <NavigationItem href="/case-studies" title="Case Studies" /> */}
+							<NavigationItem href="/case-studies" title="Projects" />
 							<NavigationItem href="/blog" title="Blog" />
 						</ul>
 					</nav>

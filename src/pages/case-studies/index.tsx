@@ -15,12 +15,12 @@ interface IProps {
 const CaseStudiesPage: NextPage<IProps> = ({ caseStudies }) => {
 	return (
 		<Layout
-			title="Software Engineering Case Studies – Chuckz Okoye"
+			title="Software Engineering Projects – Chuckz Okoye"
 			description={`Here you can find ${caseStudies.length} case studies of projects I have worked on over the last few years. Learn how I have overcome challenges.`}
 		>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl pb-8 mt-8">
-					Case Studies
+					Projects
 				</h1>
 				{caseStudies.map((caseStudy, i) => (
 					<CaseStudy key={caseStudy.slug} {...caseStudy} index={i} />

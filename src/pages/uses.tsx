@@ -15,7 +15,7 @@ const UsesPage: NextPage<IProps> = ({ markdown }) => {
 	return (
 		<Layout
 			title="Chuckz Okoye uses ..."
-			description="This is a comprehensive list of tech equipment and software I use for my day-to-day work as a software engineer in the UK."
+			description="This is a comprehensive list of tech equipment and software I use for my day-to-day work as a full-stack software engineer."
 		>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">Uses</h1>

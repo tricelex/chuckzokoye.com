@@ -18,7 +18,7 @@ const IndexPage = () => {
 
 	return (
 		<Layout
-			title="Software Engineer – Chuckz Okoye"
+			title="FullStack Software Engineer – Chuckz Okoye"
 			description="A Back-End Software Engineer with a focus on Python and JavaScript. I have more than 5 years experience working in software engineering."
 			keywords={[
 				'Software Engineer',
@@ -40,11 +40,11 @@ const IndexPage = () => {
 					Hey, I&apos;m Chuckz Okoye!
 				</h1>
 				<p className="my-8 text-lg">
-					I am a Professional Software Engineer, specialized in backend
-					development using Python and JavaScript. An advocate for building
-					decentralized applications using web3 technologies, I create and
-					contribute to amazing web applications making the internet a better
-					place. You can talk to me about{' '}
+					I am a Professional FullStack Software Engineer, specialized in web
+					applications development using Python and JavaScript frameworks. An
+					advocate for building decentralized applications using web3
+					technologies, I create and contribute to amazing web applications
+					making the internet a better place. You can talk to me about{' '}
 					<Typed
 						loop
 						typeSpeed={80}
