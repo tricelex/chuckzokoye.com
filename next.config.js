@@ -17,6 +17,6 @@ module.exports = {
 		MAILCHIMP_AUDIENCE_ID: process.env.MAILCHIMP_AUDIENCE_ID || '',
 	},
 	images: {
-		domains: ['dev-to-uploads.s3.amazonaws.com', 'media.graphcms.com'],
+		domains: ['media.graphassets.com'],
 	},
 };
