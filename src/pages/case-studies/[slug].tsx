@@ -3,13 +3,15 @@ import { ICaseStudy } from '@types';
 import { client } from 'apollo-client';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
-import Markdown from 'react-markdown';
 import { NextPage } from 'next';
+import { RichText } from '@graphcms/rich-text-react-renderer';
 
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { Button } from 'Atoms/Button';
 import { Container } from 'Atoms/Container';
 import { FloatingImages } from 'Atoms/FloatingImages';
-import { Layout } from 'Templates/Layout';
+import { SeoHead } from 'Atoms/SeoHead';
+
 import { mapCaseStudies } from 'utils/mappings/mapCaseStudies';
 import { mdxComponents } from 'utils/mdxComponents';
 
@@ -30,18 +32,19 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 	} = caseStudy;
 
 	return (
-		<Layout
-			title={`Case Study: ${title} - Chuckz Okoye's Case Studies`}
-			description={seoDescription}
-		>
+		<AnimatePage>
+			<SeoHead
+				title={`Case Study: ${title} - Chuckz Okoye's Case Studies`}
+				description={seoDescription}
+			/>
 			<Container>
-				<h1 className="headline text-3xl md:text-4xl lg:text-5xl mt-8 pb-4">
+				<h1 className="pb-4 mt-8 text-3xl headline md:text-4xl lg:text-5xl">
 					{title}
 				</h1>
-				<div className="flex flex-col-reverse md:flex-row justify-between md:h-72 md:mb-12">
-					<div className="flex flex-col h-full justify-center">
+				<div className="flex flex-col-reverse justify-between md:flex-row md:h-72 md:mb-12">
+					<div className="flex flex-col justify-center h-full">
 						<strong className="mb-2 text-sm">Client:</strong>
-						<div className="mb-4 flex gap-2 items-center">
+						<div className="flex items-center gap-2 mb-4">
 							<Image
 								src={client.logo}
 								alt={client.name}
@@ -49,7 +52,7 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 								height={32}
 								className="rounded-md"
 							/>
-							<h2 className="font-bold text-xl">{client.name}</h2>
+							<h2 className="text-xl font-bold">{client.name}</h2>
 						</div>
 						<p className="text-sm w-80">
 							<strong>Tech used: </strong>
@@ -74,9 +77,9 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 						/>
 					</div>
 				</div>
-				<Markdown components={mdxComponents}>{content}</Markdown>
+				<RichText content={content} renderers={mdxComponents} />
 			</Container>
-		</Layout>
+		</AnimatePage>
 	);
 };
 
@@ -121,7 +124,7 @@ export async function getStaticProps({ params }: Params) {
 						}
 					}
 					content {
-						markdown
+						raw
 					}
 					technologies {
 						skill

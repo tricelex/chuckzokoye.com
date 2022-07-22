@@ -25,15 +25,22 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.env
 
 # vercel
 .vercel
 
-storybook-static
+# Sentry
+.sentryclirc
 
-.idea/
+# TypeScript
+tsconfig.tsbuildinfo
+
+# storybook
+/storybook-static
+storybook-static/
+/storybook-static

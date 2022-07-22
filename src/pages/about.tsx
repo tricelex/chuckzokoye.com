@@ -7,12 +7,13 @@ import { mapJobs } from 'utils/mappings/mapJobs';
 import { mapPodcasts } from 'utils/mappings/mapPodcasts';
 import { NextPage } from 'next';
 
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { Button } from 'Atoms/Button';
 import { Container } from 'Atoms/Container';
 import { Education } from 'Organisms/Education';
 import { Icon } from 'Atoms/Icon';
-import { Layout } from 'Templates/Layout';
 import { PodcastList } from 'Molecules/PodcastList';
+import { SeoHead } from 'Atoms/SeoHead';
 import { WorkExperience } from 'Organisms/WorkExperience';
 
 interface IProps {
@@ -23,15 +24,16 @@ interface IProps {
 
 const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 	return (
-		<Layout
-			title="About Chuckz Okoye, a FullStack Software Engineer"
-			description="As a passionate full-stack software developer, I create amazing websites and web apps to make the internet a better place."
-		>
+		<AnimatePage>
+			<SeoHead
+				title="About Chuckz Okoye, a FullStack Software Engineer"
+				description="As a passionate full-stack software developer, I create amazing websites and web apps to make the internet a better place."
+			/>
 			<Container>
-				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
+				<h1 className="mt-8 text-3xl headline md:text-5xl lg:text-6xl">
 					Hey, I&apos;m Chuckz Okoye
 				</h1>
-				<h2 className="font-bold text-xl md:text-2xl mt-2">
+				<h2 className="mt-2 text-xl font-bold md:text-2xl">
 					FullStack Software Engineer from Nigeria
 				</h2>
 				<p className="mt-8">
@@ -55,15 +57,15 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 					GitcoinDAO and I love to read fiction and non-fiction books, watch
 					sci-fi movies and play games on my playstation console.
 				</p>
-				<h2 className="headline mt-12 mb-4 text-4xl">Podcasts I enjoy</h2>
+				<h2 className="mt-12 mb-4 text-4xl headline">Podcasts I enjoy</h2>
 
 				<PodcastList podcasts={podcasts} />
 
-				<h2 className="headline mt-12 mb-4 text-4xl">Experience</h2>
+				<h2 className="mt-12 mb-4 text-4xl headline">Experience</h2>
 
 				<WorkExperience jobs={jobs} />
 
-				<h2 className="headline mt-12 mb-4 text-4xl">Education</h2>
+				<h2 className="mt-12 mb-4 text-4xl headline">Education</h2>
 				<p className="mb-6">
 					I am mostly self-taught, but here are some of the most relevant
 					certifications I have achieved:
@@ -75,7 +77,7 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 					<Button
 						href="/Emmanuel_Okoye_CV.pdf"
 						download={true}
-						className="group flex gap-2 whitespace-nowrap"
+						className="flex gap-2 group whitespace-nowrap"
 					>
 						<div className="w-6 text-blue-500 group-hover:text-off-white dark:text-purple-500">
 							<Icon icon="DOWNLOAD" />
@@ -84,9 +86,22 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 							Download my CV
 						</div>
 					</Button>
+					<Button
+						onClick={() => {
+							throw new Error('Sentry Frontend Error');
+						}}
+						className="flex gap-2 group whitespace-nowrap"
+					>
+						<div className="w-6 text-blue-500 group-hover:text-off-white dark:text-purple-500">
+							<Icon icon="DOWNLOAD" />
+						</div>
+						<div className="block headline group-hover:text-off-white">
+							Throw an error
+						</div>
+					</Button>
 				</div>
 			</Container>
-		</Layout>
+		</AnimatePage>
 	);
 };
 
@@ -108,7 +123,7 @@ export async function getStaticProps() {
 					fromDate
 					toDate
 					description {
-						markdown
+						raw
 					}
 					company {
 						name

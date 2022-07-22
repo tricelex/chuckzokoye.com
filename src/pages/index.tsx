@@ -1,5 +1,6 @@
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { Container } from 'Atoms/Container';
-import { Layout } from 'Templates/Layout';
+import { SeoHead } from 'Atoms/SeoHead';
 import Typed from 'react-typed';
 
 const IndexPage = () => {
@@ -17,26 +18,27 @@ const IndexPage = () => {
 	];
 
 	return (
-		<Layout
-			title="FullStack Software Engineer – Chuckz Okoye"
-			description="A Back-End Software Engineer with a focus on Python and JavaScript. I have more than 5 years experience working in software engineering."
-			keywords={[
-				'Software Engineer',
-				'Chuckz Okoye',
-				'Blockchain',
-				'Back-End',
-				'Full-Stack',
-				'React',
-				'TypeScript',
-				'JavaScript',
-				'GraphQL',
-				'Python',
-				'Django',
-				'Solidity',
-			]}
-		>
+		<AnimatePage>
+			<SeoHead
+				title="FullStack Software Engineer – Chuckz Okoye"
+				description="A Back-End Software Engineer with a focus on Python and JavaScript. I have more than 5 years experience working in software engineering."
+				keywords={[
+					'Software Engineer',
+					'Chuckz Okoye',
+					'Blockchain',
+					'Back-End',
+					'Full-Stack',
+					'React',
+					'TypeScript',
+					'JavaScript',
+					'GraphQL',
+					'Python',
+					'Django',
+					'Solidity',
+				]}
+			/>
 			<Container>
-				<h1 className="headline mt-20 text-3xl md:text-5xl lg:text-6xl">
+				<h1 className="mt-20 text-3xl headline md:text-5xl lg:text-6xl">
 					Hey, I&apos;m Chuckz Okoye!
 				</h1>
 				<p className="my-8 text-lg">
@@ -59,7 +61,7 @@ const IndexPage = () => {
 					.
 				</p>
 			</Container>
-		</Layout>
+		</AnimatePage>
 	);
 };
 

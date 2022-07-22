@@ -6,7 +6,7 @@ const createJestConfig = nextJest({
 
 const customJestConfig = {
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-	moduleDirectories: ['node_modules', './'],
+	moduleDirectories: ['node_modules', __dirname],
 	moduleNameMapper: {
 		// Components
 		'^Atoms(.*)$': '<rootDir>/src/components/atoms$1',

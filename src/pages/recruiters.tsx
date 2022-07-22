@@ -1,19 +1,28 @@
 import { client } from 'apollo-client';
 import { gql } from '@apollo/client';
-import Markdown from 'react-markdown';
+import { mdxComponents } from 'utils/mdxComponents';
 import { NextPage } from 'next';
+import { RichText } from '@graphcms/rich-text-react-renderer';
+import { RichTextContent } from '@graphcms/rich-text-types';
 import { useState } from 'react';
 
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { Container } from 'Atoms/Container';
-import { Layout } from 'Templates/Layout';
-import { mdxComponents } from 'utils/mdxComponents';
 import { RecruiterForm } from 'Molecules/RecruiterForm';
+import { Salary } from 'Molecules/Salary';
+import { SeoHead } from 'Atoms/SeoHead';
 
 interface IProps {
-	markdown: string;
+	markdown: RichTextContent;
+	references: any;
+	salary: {
+		minimum: number;
+		median: number;
+		maximum: number;
+	};
 }
 
-const RecruitersPage: NextPage<IProps> = ({ markdown }) => {
+const RecruitersPage: NextPage<IProps> = ({ markdown, references, salary }) => {
 	const [success, setSuccess] = useState(false);
 	const [error, setError] = useState(false);
 
@@ -48,26 +57,35 @@ const RecruitersPage: NextPage<IProps> = ({ markdown }) => {
 	};
 
 	return (
-		<Layout
-			title="Recruiter Information about Chuckz Okoye"
-			description="Thank you for your interest in me for software engineering roles you are hiring for."
-		>
+		<AnimatePage>
+			<SeoHead
+				title="Recruiter Information about Chuckz Okoye"
+				description="Thank you for your interest in me for software engineering roles you are hiring for."
+			/>
 			<Container>
-				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
+				<h1 className="mt-8 text-3xl headline md:text-5xl lg:text-6xl">
 					Hi, I&apos;m Chuckz Okoye!
 				</h1>
-				<h2 className="headline text-xl md:text-2xl lg:text-3xl">
+				<h2 className="text-xl headline md:text-2xl lg:text-3xl">
 					Nice to meet you.
 				</h2>
-				<Markdown components={mdxComponents}>{markdown}</Markdown>
-
+				<RichText
+					content={markdown}
+					references={references}
+					renderers={{
+						...mdxComponents,
+						embed: {
+							Salary: () => <Salary salaryRange={salary} />,
+						},
+					}}
+				/>
 				<RecruiterForm
 					handleSubmit={handleSubmit}
 					success={success}
 					error={error}
 				/>
 			</Container>
-		</Layout>
+		</AnimatePage>
 	);
 };
 
@@ -77,8 +95,19 @@ export async function getStaticProps() {
 			query RecruitersPageQuery {
 				page(where: { slug: "recruiters" }) {
 					content {
-						markdown
+						raw
+						references {
+							__typename
+							... on Salary {
+								id
+							}
+						}
 					}
+				}
+				salary(where: { id: "cl1fknk2a1mv40bmrio155zi8" }) {
+					minimum
+					median
+					maximum
 				}
 			}
 		`,
@@ -86,7 +115,9 @@ export async function getStaticProps() {
 
 	return {
 		props: {
-			markdown: data.page.content.markdown,
+			markdown: data.page.content.raw,
+			references: data.page.content.references,
+			salary: data.salary,
 		},
 	};
 }

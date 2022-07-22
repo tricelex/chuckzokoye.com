@@ -20,3 +20,11 @@ export const client = new ApolloClient({
 	link: from([errorLink, httpLink]),
 	cache: new InMemoryCache(),
 });
+
+// added this from new update
+// import { ApolloClient, InMemoryCache } from '@apollo/client';
+
+// export const Newclient = new ApolloClient({
+// 	uri: `https://api-eu-west-2.graphcms.com/v2/${process.env.GRAPHCMS_PROJECT_ID}/${process.env.GRAPHCMS_ENV}`,
+// 	cache: new InMemoryCache(),
+// });

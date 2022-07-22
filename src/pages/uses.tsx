@@ -1,27 +1,30 @@
 import { client } from 'apollo-client';
 import { gql } from '@apollo/client';
-import Markdown from 'react-markdown';
-import { NextPage } from 'next';
-
-import { Container } from 'Atoms/Container';
-import { Layout } from 'Templates/Layout';
 import { mdxComponents } from 'utils/mdxComponents';
+import { NextPage } from 'next';
+import { RichText } from '@graphcms/rich-text-react-renderer';
+import { RichTextContent } from '@graphcms/rich-text-types';
+
+import { AnimatePage } from 'Atoms/AnimatePage';
+import { Container } from 'Atoms/Container';
+import { SeoHead } from 'Atoms/SeoHead';
 
 interface IProps {
-	markdown: string;
+	markdown: RichTextContent;
 }
 
 const UsesPage: NextPage<IProps> = ({ markdown }) => {
 	return (
-		<Layout
-			title="Chuckz Okoye uses ..."
-			description="This is a comprehensive list of tech equipment and software I use for my day-to-day work as a full-stack software engineer."
-		>
+		<AnimatePage>
+			<SeoHead
+				title="Chuckz Okoye uses ..."
+				description="This is a comprehensive list of tech equipment and software I use for my day-to-day work as a full-stack software engineer."
+			/>
 			<Container>
-				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">Uses</h1>
-				<Markdown components={mdxComponents}>{markdown}</Markdown>
+				<h1 className="mt-8 text-3xl headline md:text-5xl lg:text-6xl">Uses</h1>
+				<RichText content={markdown} renderers={mdxComponents} />
 			</Container>
-		</Layout>
+		</AnimatePage>
 	);
 };
 
@@ -31,7 +34,7 @@ export async function getStaticProps() {
 			query UsesPageQuery {
 				page(where: { slug: "uses" }) {
 					content {
-						markdown
+						raw
 					}
 				}
 			}
@@ -40,7 +43,7 @@ export async function getStaticProps() {
 
 	return {
 		props: {
-			markdown: data.page.content.markdown,
+			markdown: data.page.content.raw,
 		},
 	};
 }

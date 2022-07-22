@@ -1,13 +1,10 @@
-import { Layout, Props } from './Layout';
+import { Layout } from './Layout';
 
 export default {
 	title: 'templates/Layout',
 	component: Layout,
 };
 
-export const LayoutStory = (args: Props) => <Layout {...args} />;
+export const LayoutStory = () => <Layout>Some content</Layout>;
 
 LayoutStory.storyName = 'Layout';
-LayoutStory.args = {
-	title: 'Some title',
-};

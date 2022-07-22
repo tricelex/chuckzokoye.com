@@ -2,16 +2,19 @@ import { client } from 'apollo-client';
 import format from 'date-fns/format';
 import { gql } from '@apollo/client';
 import { IBlogPost } from '@types';
-import Markdown from 'react-markdown';
 import { NextPage } from 'next';
+import { RichText } from '@graphcms/rich-text-react-renderer';
+import { RichTextContent } from '@graphcms/rich-text-types';
 
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { Container } from 'Atoms/Container';
-import { Layout } from 'Templates/Layout';
+import { SeoHead } from 'Atoms/SeoHead';
+
 import { mdxComponents } from 'utils/mdxComponents';
 
 interface IProps {
 	title: string;
-	content: string;
+	content: RichTextContent;
 	seoDescription: string;
 	publishedDate: string;
 	slug: string;
@@ -23,27 +26,29 @@ const PostPage: NextPage<IProps> = ({
 	seoDescription,
 	publishedDate,
 }) => {
-	const numOfWords = content.split(' ').length;
-	const readTime = Math.ceil(numOfWords / 250);
+	// TODO: Re-add
+	// const numOfWords = content.split(' ').length;
+	// const readTime = Math.ceil(numOfWords / 250);
 
 	return (
-		<Layout
-			title={`${title} - Chuckz Okoye's Blog`}
-			description={seoDescription}
-		>
+		<AnimatePage>
+			<SeoHead
+				title={`${title} - Jacob Herper's Blog`}
+				description={seoDescription}
+			/>
 			<Container>
-				<h1 className="headline text-3xl md:text-4xl lg:text-5xl mt-8">
+				<h1 className="mt-8 text-3xl headline md:text-4xl lg:text-5xl">
 					{title}
 				</h1>
-				<p className="my-8 flex justify-between text-sm md:text-md">
-					<em>~{readTime} minute read</em>
+				<p className="flex justify-between my-8 text-sm md:text-md">
+					{/* <em>~{readTime} minute read</em> */}
 					<span>
 						Written on {format(new Date(publishedDate), 'do MMM yyyy')}
 					</span>
 				</p>
-				<Markdown components={mdxComponents}>{content}</Markdown>
+				<RichText content={content} renderers={mdxComponents} />
 			</Container>
-		</Layout>
+		</AnimatePage>
 	);
 };
 
@@ -77,7 +82,7 @@ export async function getStaticProps({ params }: Params) {
 			query PostPageQuery($slug: String!) {
 				blog(where: { slug: $slug }) {
 					content {
-						markdown
+						raw
 					}
 					seoDescription
 					publishedDate
@@ -91,7 +96,7 @@ export async function getStaticProps({ params }: Params) {
 
 	return {
 		props: {
-			content: data.blog.content.markdown,
+			content: data.blog.content.raw,
 			publishedDate: data.blog.publishedDate,
 			slug: data.blog.slug,
 			title: data.blog.title,

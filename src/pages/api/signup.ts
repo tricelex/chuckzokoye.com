@@ -1,3 +1,4 @@
+import { withSentry } from '@sentry/nextjs';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 import getConfig from 'next/config';
@@ -17,7 +18,7 @@ mailchimp.setConfig({
 	server: MAILCHIMP_API_SERVER,
 });
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const signupHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 	const { firstName, lastName, company, email, type } = req.body;
 
 	if (!email) {
@@ -29,8 +30,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		await mailchimp.lists.setListMember(MAILCHIMP_AUDIENCE_ID, hashedEmail, {
 			email_address: email,
-			// @ts-expect-error something about the enum
-			status: 'subscribed',
+			status_if_new: 'subscribed',
 			merge_fields: {
 				FNAME: firstName,
 				LNAME: lastName,
@@ -44,3 +44,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		return res.status(500).json({ error: err.message || err.toString() });
 	}
 };
+
+export default withSentry(signupHandler);
