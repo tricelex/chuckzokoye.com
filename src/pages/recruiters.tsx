@@ -104,7 +104,7 @@ export async function getStaticProps() {
 						}
 					}
 				}
-				salary(where: { id: "cl1fknk2a1mv40bmrio155zi8" }) {
+				salary(where: { id: "cl5wi1brz2qmb0bmiwrj6mk4s" }) {
 					minimum
 					median
 					maximum
