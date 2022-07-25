@@ -33,7 +33,7 @@ const PostPage: NextPage<IProps> = ({
 	return (
 		<AnimatePage>
 			<SeoHead
-				title={`${title} - Jacob Herper's Blog`}
+				title={`${title} - Chuckz Okoye's Blog`}
 				description={seoDescription}
 			/>
 			<Container>

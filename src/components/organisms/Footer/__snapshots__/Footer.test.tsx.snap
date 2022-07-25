@@ -3,12 +3,12 @@
 exports[`Footer renders correctly 1`] = `
 <div>
   <footer
-    class="flex justify-between mt-8 md:mt-20 px-4 md:px-20 py-8"
+    class="flex justify-between px-4 py-8 mt-8 md:mt-20 md:px-20"
   >
     <span>
       © 
       2022
-       Jacob Herper
+       Chuckz Okoye
     </span>
     <ul
       class="flex gap-6"
@@ -17,7 +17,7 @@ exports[`Footer renders correctly 1`] = `
         class="w-6 h-6 opacity-70 hover:opacity-100 transition"
       >
         <a
-          href="https://www.github.com/jakeherp"
+          href="https://www.github.com/tricelex"
           rel="noopener noreferrer"
           target="_blank"
           title="Github"
@@ -29,7 +29,7 @@ exports[`Footer renders correctly 1`] = `
         class="w-6 h-6 opacity-70 hover:opacity-100 transition"
       >
         <a
-          href="https://www.linkedin.com/in/jacobherper"
+          href="https://www.linkedin.com/in/chuckzokoye"
           rel="noopener noreferrer"
           target="_blank"
           title="LinkedIn"
@@ -41,7 +41,7 @@ exports[`Footer renders correctly 1`] = `
         class="w-6 h-6 opacity-70 hover:opacity-100 transition"
       >
         <a
-          href="https://twitter.com/jakeherp"
+          href="https://twitter.com/chuckzokoye"
           rel="noopener noreferrer"
           target="_blank"
           title="Twitter"
@@ -53,7 +53,7 @@ exports[`Footer renders correctly 1`] = `
         class="w-6 h-6 opacity-70 hover:opacity-100 transition"
       >
         <a
-          href="https://www.instagram.com/jakeherp"
+          href="https://www.instagram.com/chuckzokoye"
           rel="noopener noreferrer"
           target="_blank"
           title="Instagram"

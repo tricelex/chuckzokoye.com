@@ -6,25 +6,25 @@ exports[`Layout renders correctly 1`] = `
     class="flex flex-col justify-between min-h-screen"
   >
     <header
-      class="relative z-50 px-4 py-8 lg:px-20"
+      class="relative z-50 px-4 lg:px-20 py-8"
     >
       <div
-        class="flex items-center justify-between"
+        class="flex justify-between items-center"
       >
         <a
-          class="relative text-2xl font-bold transition duration-300 group whitespace-nowrap hover:transition"
+          class="group relative transition whitespace-nowrap hover:transition duration-300 text-2xl font-bold"
           href="/"
           style="opacity: 0; transform: translateY(-10px) translateZ(0);"
         >
           <span
             class="transition duration-300 opacity-100 group-hover:opacity-0"
           >
-            @jakeherp
+            @ChuckzOkoye
           </span>
           <span
-            class="absolute left-0 text-transparent transition duration-300 opacity-0 group-hover:opacity-100 bg-clip-text hover:bg-gradient-to-r from-blue-start to-blue-stop dark:from-purple-start dark:to-purple-stop"
+            class="absolute transition duration-300 left-0 opacity-0 group-hover:opacity-100 text-transparent bg-clip-text hover:bg-gradient-to-r from-blue-start to-blue-stop dark:from-purple-start dark:to-purple-stop"
           >
-            Jacob Herper
+            Chuckz Okoye
           </span>
         </a>
         <nav
@@ -37,7 +37,7 @@ exports[`Layout renders correctly 1`] = `
               style="opacity: 0; transform: translateY(-10px) translateZ(0);"
             >
               <a
-                class="relative block text-2xl font-medium transition text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined whitespace-nowrap md:text-lg"
+                class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
                 href="/about"
               >
                 About
@@ -47,7 +47,7 @@ exports[`Layout renders correctly 1`] = `
               style="opacity: 0; transform: translateY(-10px) translateZ(0);"
             >
               <a
-                class="relative block text-2xl font-medium transition text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined whitespace-nowrap md:text-lg"
+                class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
                 href="/uses"
               >
                 Uses
@@ -57,7 +57,7 @@ exports[`Layout renders correctly 1`] = `
               style="opacity: 0; transform: translateY(-10px) translateZ(0);"
             >
               <a
-                class="relative block text-2xl font-medium transition text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined whitespace-nowrap md:text-lg"
+                class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
                 href="/case-studies"
               >
                 Case Studies
@@ -67,7 +67,7 @@ exports[`Layout renders correctly 1`] = `
               style="opacity: 0; transform: translateY(-10px) translateZ(0);"
             >
               <a
-                class="relative block text-2xl font-medium transition text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined whitespace-nowrap md:text-lg"
+                class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
                 href="/blog"
               >
                 Blog
@@ -93,7 +93,7 @@ exports[`Layout renders correctly 1`] = `
         >
           <button
             aria-label="Toggle Dark Mode"
-            class="flex items-center justify-center p-2 transition-all bg-transparent border-2 rounded-full border-grey-300 dark:border-grey-700 dark:bg-transparent hover:ring-2 hover:ring-offset-2 ring-grey-300 dark:hover:ring-2 dark:hover:ring-offset-2 dark:ring-grey-200"
+            class="p-2 bg-transparent border-2 border-grey-300 dark:border-grey-700 rounded-full dark:bg-transparent flex items-center justify-center hover:ring-2 hover:ring-offset-2 ring-grey-300 dark:hover:ring-2 dark:hover:ring-offset-2 dark:ring-grey-200 transition-all"
             type="button"
           >
             <svg
@@ -130,16 +130,16 @@ exports[`Layout renders correctly 1`] = `
       <span>
         © 
         2022
-         Jacob Herper
+         Chuckz Okoye
       </span>
       <ul
         class="flex gap-6"
       >
         <li
-          class="w-6 h-6 transition opacity-70 hover:opacity-100"
+          class="w-6 h-6 opacity-70 hover:opacity-100 transition"
         >
           <a
-            href="https://www.github.com/jakeherp"
+            href="https://www.github.com/tricelex"
             rel="noopener noreferrer"
             target="_blank"
             title="Github"
@@ -148,10 +148,10 @@ exports[`Layout renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="w-6 h-6 transition opacity-70 hover:opacity-100"
+          class="w-6 h-6 opacity-70 hover:opacity-100 transition"
         >
           <a
-            href="https://www.linkedin.com/in/jacobherper"
+            href="https://www.linkedin.com/in/chuckzokoye"
             rel="noopener noreferrer"
             target="_blank"
             title="LinkedIn"
@@ -160,10 +160,10 @@ exports[`Layout renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="w-6 h-6 transition opacity-70 hover:opacity-100"
+          class="w-6 h-6 opacity-70 hover:opacity-100 transition"
         >
           <a
-            href="https://twitter.com/jakeherp"
+            href="https://twitter.com/chuckzokoye"
             rel="noopener noreferrer"
             target="_blank"
             title="Twitter"
@@ -172,10 +172,10 @@ exports[`Layout renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="w-6 h-6 transition opacity-70 hover:opacity-100"
+          class="w-6 h-6 opacity-70 hover:opacity-100 transition"
         >
           <a
-            href="https://www.instagram.com/jakeherp"
+            href="https://www.instagram.com/chuckzokoye"
             rel="noopener noreferrer"
             target="_blank"
             title="Instagram"
