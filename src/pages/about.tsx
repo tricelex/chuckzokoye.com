@@ -44,11 +44,11 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 					technologies.
 				</p>
 				<p className="my-4">
-					I am 26 years old and have been a professional web developer for about
+					I am 27 years old and have been a professional web developer for about
 					5 years now. The technologies I work with are JavaScript, Python and
 					Solidity with a focus on Django, React.js, Next.js, Node and Express.
 					I use code not only to do my day-to-day job, but also to contribute to
-					open-source projects in the web3 space.
+					open-source projects.
 				</p>
 				<p>
 					When I am not writing code I love to spend time with my family and
@@ -84,19 +84,6 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 						</div>
 						<div className="block headline group-hover:text-off-white">
 							Download my CV
-						</div>
-					</Button>
-					<Button
-						onClick={() => {
-							throw new Error('Sentry Frontend Error');
-						}}
-						className="flex gap-2 group whitespace-nowrap"
-					>
-						<div className="w-6 text-blue-500 group-hover:text-off-white dark:text-purple-500">
-							<Icon icon="DOWNLOAD" />
-						</div>
-						<div className="block headline group-hover:text-off-white">
-							Throw an error
 						</div>
 					</Button>
 				</div>

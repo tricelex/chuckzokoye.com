@@ -19,12 +19,13 @@ const moduleExports = {
 		MAILCHIMP_AUDIENCE_ID: process.env.MAILCHIMP_AUDIENCE_ID || '',
 	},
 	images: {
-		domains: ['media.graphassets.com'],
+		domains: ['media.graphcms.com', 'media.graphassets.com'],
 	},
 };
 
 const sentryWebpackPluginOptions = {
 	silent: false, // Suppresses all logs
+	hideSourceMaps: true,
 	// For all available options, see:
 	// https://github.com/getsentry/sentry-webpack-plugin#options.
 };

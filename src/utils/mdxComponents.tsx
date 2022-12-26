@@ -1,25 +1,26 @@
 import { NodeRendererType } from '@graphcms/rich-text-react-renderer';
+import { ReactNode } from 'react';
 
 import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import Image from 'next/image';
 import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 export const mdxComponents: NodeRendererType = {
-	h2: ({ children }) => <h2 className="mt-8 text-3xl headline">{children}</h2>,
-	h3: ({ children }) => <h3 className="mt-8 text-2xl headline">{children}</h3>,
+	h2: ({ children }) => <h2 className="headline text-3xl mt-8">{children}</h2>,
+	h3: ({ children }) => <h3 className="headline text-2xl mt-8">{children}</h3>,
 	a: ({ children, href }) => {
 		return (
 			<a
 				href={href}
 				target="_blank"
-				className="relative underlined"
+				className="underlined relative"
 				rel="noopener noreferrer"
 			>
 				{children}
 			</a>
 		);
 	},
-	ul: ({ children }) => <ul className="mt-4 ml-4 list-disc">{children}</ul>,
+	ul: ({ children }) => <ul className="list-disc ml-4 mt-4">{children}</ul>,
 	li: ({ children }) => <li className="mt-1">{children}</li>,
 	p: ({ children }) => (
 		<p className="mt-4 mb-4 text-lg leading-7">{children}</p>
@@ -28,9 +29,9 @@ export const mdxComponents: NodeRendererType = {
 		<SyntaxHighlighter
 			language="typescript"
 			style={dracula}
-			className="p-4 text-sm border rounded-md shadow-lg border-grey-300 dark:border-grey-700 shadow-grey-500 dark:shadow-grey-800"
+			className="text-sm rounded-md p-4 border border-grey-300 dark:border-grey-700 shadow-lg shadow-grey-500 dark:shadow-grey-800"
 		>
-			{children}
+			{children as string}
 		</SyntaxHighlighter>
 	),
 	img: ({ altText, src }) => (
