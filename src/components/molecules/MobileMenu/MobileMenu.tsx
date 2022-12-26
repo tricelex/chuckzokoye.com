@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from 'framer-motion';
 import FocusTrap from 'focus-trap-react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import { NavigationItem } from 'Atoms/NavigationItem';
 import { navItems } from 'Organisms/Header';
