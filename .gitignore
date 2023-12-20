@@ -44,3 +44,5 @@ tsconfig.tsbuildinfo
 /storybook-static
 storybook-static/
 /storybook-static
+
+.idea/
