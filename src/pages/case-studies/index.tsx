@@ -22,7 +22,7 @@ const CaseStudiesPage: NextPage<IProps> = ({ caseStudies }) => {
 			/>
 			<Container>
 				<h1 className="pb-8 mt-8 text-3xl headline md:text-5xl lg:text-6xl">
-					Case Studies
+					Portfolio
 				</h1>
 				{caseStudies.map((caseStudy, i) => (
 					<CaseStudy key={caseStudy.slug} {...caseStudy} index={i} />
