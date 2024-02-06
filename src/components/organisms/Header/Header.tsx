@@ -19,7 +19,11 @@ export const navItems = [
 	},
 	{
 		href: '/case-studies',
-		title: 'Case Studies',
+		title: 'Portfolio',
+	},
+	{
+		href: '/pitch',
+		title: 'Elevator Pitch',
 	},
 	{
 		href: '/blog',
